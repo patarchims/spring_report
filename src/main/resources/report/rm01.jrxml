@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="1bbe28d7-3936-49d6-88c8-4ecadace3245">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="912"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<parameter name="c_rm" class="java.lang.String"/>
+	<parameter name="c_nama" class="java.lang.String"/>
+	<parameter name="c_gender" class="java.lang.String"/>
+	<parameter name="c_tgllahir" class="java.lang.String"/>
+	<parameter name="c_perawat" class="java.lang.String"/>
+	<parameter name="c_inter1_ya" class="java.lang.String"/>
+	<parameter name="c_inter1_tidak" class="java.lang.String"/>
+	<parameter name="c_inter2_ya" class="java.lang.String"/>
+	<parameter name="c_inter2_tidak" class="java.lang.String"/>
+	<parameter name="c_inter3_ya" class="java.lang.String"/>
+	<parameter name="c_inter3_tidak" class="java.lang.String"/>
+	<parameter name="c_inter4_ya" class="java.lang.String"/>
+	<parameter name="c_inter4_tidak" class="java.lang.String"/>
+	<parameter name="c_gawat_tidaksadar" class="java.lang.String"/>
+	<parameter name="c_gawat_jari" class="java.lang.String"/>
+	<parameter name="c_gawat_sesak" class="java.lang.String"/>
+	<parameter name="c_gawat_muntah" class="java.lang.String"/>
+	<parameter name="c_gawat_kejang" class="java.lang.String"/>
+	<parameter name="c_gawat_bayi" class="java.lang.String"/>
+	<parameter name="c_fisik_kesulitan" class="java.lang.String"/>
+	<parameter name="c_fisik_kesakitan" class="java.lang.String"/>
+	<parameter name="c_fisik_gangguan" class="java.lang.String"/>
+	<parameter name="c_fisik_kelemahan" class="java.lang.String"/>
+	<parameter name="c_batuk_panjang" class="java.lang.String"/>
+	<parameter name="c_batuk_berdarah" class="java.lang.String"/>
+	<parameter name="c_resiko_jatuh" class="java.lang.String"/>
+	<parameter name="c_tidak_resiko" class="java.lang.String"/>
+	<parameter name="c_tanggal" class="java.util.Date"/>
+	<parameter name="c_jam" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="766">
+			<frame>
+				<reportElement x="0" y="0" width="539" height="760" uuid="0d63ca6b-b6f6-4ed5-926c-fea63badc094"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="204" height="58" uuid="1f953156-99d9-49e7-acca-64833cdf9511"/>
+					<box>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
+					<image onErrorType="Blank">
+						<reportElement x="7" y="6" width="187" height="49" uuid="e8e9c166-1cae-4aed-ac9c-061d3a4264ed"/>
+						<imageExpression><![CDATA["images/kop_surat.png"]]></imageExpression>
+					</image>
+				</frame>
+				<frame>
+					<reportElement x="203" y="0" width="280" height="58" uuid="235e237e-e298-4fc6-98e5-01e8e66d8f2f"/>
+					<box>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
+					<textField>
+						<reportElement x="56" y="3" width="100" height="18" uuid="341c582d-6f32-4393-a4a8-2e2aacedc386"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_rm}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="56" y="20" width="195" height="18" uuid="ec366fac-5e37-4738-b08e-8fee9db91456"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_nama}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="251" y="20" width="22" height="18" uuid="c044e98e-9164-4aa0-9b47-693b5fafb07f"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gender}.equals("Perempuan") ? "P":"L")]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="5" y="3" width="44" height="18" uuid="5a3b8972-2d47-42d8-bcd2-623b44974dc0"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["No. RM"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="5" y="20" width="44" height="18" uuid="2ce3db18-f285-48a7-92f1-d87fe92fd8db"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Nama"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="5" y="37" width="44" height="18" uuid="a8337b1b-de72-461e-a169-9de294b46801"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tgl. Lahir"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="48" y="3" width="8" height="18" uuid="c291d8a7-b3c3-494c-9fed-a25bd12ae6fb"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="48" y="20" width="8" height="18" uuid="95d043b1-949d-4ad7-917d-a9072b452ff9"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="48" y="37" width="8" height="18" uuid="7cac8f63-a3ce-4f02-9baa-981494b2e29a"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[":"]]></textFieldExpression>
+					</textField>
+					<textField pattern="">
+						<reportElement x="56" y="37" width="205" height="18" uuid="d5e4ca0f-4ea7-4e90-becf-e21ec316ce2c"/>
+						<box>
+							<bottomPen lineWidth="0.0"/>
+						</box>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_tgllahir}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="483" y="0" width="56" height="58" uuid="dd02aba9-aeae-45c3-b7f4-620819c4fc11"/>
+					<textField>
+						<reportElement mode="Opaque" x="0" y="0" width="56" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="a991aa7b-10ed-406b-9eaa-456283b64490"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="14" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["RM"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="0" y="38" width="56" height="20" uuid="3e44835b-b809-49fb-8482-19a2a21f87de"/>
+						<box>
+							<bottomPen lineWidth="0.75"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="14" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["01"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement mode="Opaque" x="0" y="19" width="56" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="b2727329-ce8f-4308-a4da-12b4358bec1b"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="14" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["RJ"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="58" width="539" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="2ac24985-b0a6-4537-a30a-215cf260e3b2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["SKRINING PASIEN RAWAT JALAN"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="6" y="78" width="529" height="20" uuid="078647f4-d38e-465f-bca4-a97d19b5560d"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						<paragraph firstLineIndent="4"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Beri tanda (    )  pada        pilihan !"]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement mode="Opaque" x="0" y="96" width="204" height="28" backcolor="#FF3333" uuid="a473bced-4be6-404f-abf3-04f53e628fc6"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="1" y="1" width="203" height="26" forecolor="#000000" uuid="e9afcfd8-ea3d-482f-99db-de52dca838c8"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["KEGAWATAN"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="123" width="204" height="28" uuid="ef8c277a-92b0-42fe-a3c0-7e82ee59f0f0"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="4" width="168" height="14" uuid="976adb6a-7025-481b-82a2-a1290204f5c9"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak Sadar"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="4" width="14" height="14" uuid="62438a4b-61d5-49d1-98ed-2879fe62611f"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_tidaksadar}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="150" width="204" height="28" uuid="ce61f70d-2e7b-4110-85b7-6bd1e22b1c44"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="2" width="168" height="22" uuid="5fcff015-3d85-4aee-ab07-adb8aff01ee9"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Jari-jari dan kaki teraba dingin atau tampak kebiruan"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="5" width="14" height="14" uuid="3b45242b-4857-48d5-be1e-a7f86785045f"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_jari}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="177" width="204" height="28" uuid="fea5ac20-9f43-4248-a0f4-8a0f4b34a413"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="4" width="168" height="20" uuid="65d4bb0a-47b7-48db-a694-9b6a35d5facd"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Sesak napas berat"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="5" width="14" height="14" uuid="9c563f25-52b9-4d02-8f5f-7e13923babe8"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_sesak}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="231" width="204" height="28" uuid="555d6529-2ad2-4ba1-ab9e-d156f2422b0e"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="4" width="168" height="20" uuid="426588c9-a79c-463a-8c19-42e4690a471e"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Kejang"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="4" width="14" height="14" uuid="0c4a7433-8a27-4a71-9c28-3ab2b33b367e"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_kejang}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="204" width="204" height="28" uuid="6959e2a6-d4d2-4213-9c4c-e9e876af935f"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="5" width="182" height="20" uuid="efb9c2b7-e8b3-487f-ab72-46e37c7c1d80"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Muntah, diare atau keduanya > 4 - 5 x/24 jam"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="5" width="14" height="14" uuid="da4d8991-29ae-451b-98e3-e52850da42e1"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_muntah}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="258" width="204" height="28" uuid="c5331384-19da-4d16-b467-3d02d97e5ea1"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="1" width="168" height="27" uuid="43182d95-4ed0-44b8-9464-3326bfc79728"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Khusus untuk bayi : Ubun-ubun kelihatan cekung atau teraba cekung "]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="4" y="6" width="14" height="14" uuid="dd81247a-ef5d-477a-befa-492af5677de7"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_gawat_bayi}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="96" width="168" height="28" uuid="a6fc6a89-0cd5-49a2-80ba-b7c76db790fd"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="1" y="1" width="166" height="26" uuid="55331655-35ba-4a84-a421-51931f929b99"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["KETERBATASAN FISIK"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="123" width="168" height="28" uuid="11212983-bea9-4ef5-9a55-93ad71afdc52"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="27" y="4" width="131" height="14" uuid="14270d28-0025-407c-8bc1-0d22fddd865d"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Kesulitan Berjalan"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="8" y="5" width="14" height="14" uuid="5cce75d8-28f3-4f7b-be19-bc39e45ab703"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_fisik_kesulitan}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="150" width="168" height="28" uuid="0244b15e-b696-4c89-a588-0797a7d15436"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="27" y="3" width="131" height="20" uuid="c22fcff3-8d04-4d5a-bd28-eef186c23a9d"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Kesakitan"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="8" y="5" width="14" height="14" uuid="8d03ff69-5a0a-4c01-9eb9-8fa9ec2920f9"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_fisik_kesakitan}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="178" width="168" height="28" uuid="a83ff57b-849a-4b8e-a198-f2edbf4fdb0c"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="27" y="4" width="131" height="20" uuid="b87f127e-4bb7-47e3-835b-adec56d85dc0"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Gangguan penglihatan"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="8" y="5" width="14" height="14" uuid="aa2e43d5-b726-499a-b745-c53e4c904c32"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_fisik_gangguan}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="204" width="168" height="28" uuid="5355758e-6612-4a37-8665-dd43a04a35a2"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="27" y="5" width="131" height="20" uuid="910babc5-bca2-4f6e-bf6c-b95f97572e5a"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Kelemahan anggota gerak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="8" y="6" width="14" height="14" uuid="4b0283c8-7edb-4294-8752-a05e7b309184"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_fisik_kelemahan}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="96" width="168" height="28" uuid="22fe7ffb-bcd0-44ed-bccf-be4cfd5fef39"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="2" y="1" width="166" height="26" uuid="63b642a3-a755-4d2b-897a-0db779644c4c"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA["BATUK"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="123" width="168" height="28" uuid="d34f295a-0714-44da-a871-d947b57f713c"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="20" y="0" width="145" height="28" uuid="78b2ab15-fbb3-4886-b0b7-34e602a55672"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Batuk-batuk berkepanjangan (Batuk ngekel) baik disertai panas atau tidak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="3" y="6" width="14" height="14" uuid="0fd2895d-b1f1-4fae-977a-3b60924b255b"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_batuk_panjang}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="150" width="168" height="28" uuid="84f0d22b-fb97-47ec-9900-a18fc4b89346"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="22" y="4" width="144" height="20" uuid="0965f80a-af55-4af3-b96b-9c85629687ba"/>
+						<textElement>
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Batuk Berdarah"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="6" y="5" width="14" height="14" uuid="c92979dc-0965-4a70-afd9-e7c0081e0ee0"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[($P{c_batuk_berdarah}.equalsIgnoreCase("1"))?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="286" width="204" height="48" uuid="5f06376d-2259-4143-a3a1-8063b60b45b6"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="7" y="2" width="183" height="44" uuid="c799c045-04c5-4b6b-b29f-d3d1199e1b4f"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Jika ada salah satu atau lebih tanda diatas, pasien langsung ditransfer ke Instalasi Gawat Darurat"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="203" y="286" width="168" height="48" uuid="520e1c94-0256-48fb-8125-68b889ff9494"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="13" y="2" width="146" height="44" uuid="41ae867b-7b69-4197-ae77-18c345477110"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Jika ada satu atau lebih tanda diatas, berikan alat bantu kepada pasien (Brankat atau kursi roda) sesuai kondisi pasien"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="370" y="286" width="168" height="48" uuid="d5e15cb6-0b4b-4ea8-84ea-427979a7e853"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="15" y="2" width="140" height="44" uuid="1870c6d8-7663-40d0-b1cb-be8e4995b8ff"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Jika ada satu atau lebih tanda diatas, berikan masker kepada pasien, lakukan percepatan pelayanan sesuai kondisi pasien"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField>
+					<reportElement mode="Opaque" x="1" y="334" width="538" height="20" backcolor="#FFFF66" uuid="f2fcf8d8-6ff6-40c6-bb67-bac020815ff7"/>
+					<box>
+						<topPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["RISIKO JATUH"]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement x="0" y="354" width="538" height="87" uuid="3d559589-eea3-488f-8058-68036f818ab4"/>
+					<box>
+						<bottomPen lineWidth="0.75"/>
+					</box>
+					<staticText>
+						<reportElement x="1" y="0" width="100" height="18" uuid="bb1c23f0-41f9-4614-8866-a64cb9cdf814"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="DejaVu Sans" isBold="false"/>
+							<paragraph firstLineIndent="4"/>
+						</textElement>
+						<text><![CDATA[Kriteria Pasien]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="41" y="19" width="485" height="22" uuid="10996587-9412-4b5a-be36-279298405ebc"/>
+						<textElement textAlignment="Justified" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Kondisi : usia lebih dari 60 tahun/ gangguan berjalan atau keseimbangan/ gangguan penglihatan/ persiapan khusus untuk prosedur diagnosis/ persiapan anestesi/ persiapan hemodialisa"]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="16" y="19" width="20" height="22" uuid="7795663f-6084-47f8-94c8-89b1a31d5576"/>
+						<textElement textAlignment="Center">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<text><![CDATA[a.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="16" y="41" width="20" height="22" uuid="cf8a7b6d-c335-4167-98e4-8cd55171dcff"/>
+						<textElement textAlignment="Center">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<text><![CDATA[b.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="16" y="75" width="20" height="11" uuid="23193ef4-8984-4453-9088-47a56448f983"/>
+						<textElement textAlignment="Center">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<text><![CDATA[d.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="16" y="63" width="20" height="11" uuid="5b2dce89-7311-4d85-971d-2b211be937ba"/>
+						<textElement textAlignment="Center">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<text><![CDATA[c.]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="41" y="41" width="485" height="22" uuid="669bcad9-3192-4b41-ae22-fa0a7ca9f980"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Lokasi : Pasien Rehabilitasi Medis/ One Day Surgery/ radiologi(pasien yang membutuhkan preparasi radiologi) / Instalasi Gawat Darurat "]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="41" y="63" width="485" height="11" uuid="e1b0dfef-dd4d-4fda-bf3b-7d45b32197ae"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Situasi : Pasien membutuhkan atau menggunakan alat bantu mobilisasi"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="41" y="75" width="485" height="11" uuid="2c48d525-37e2-4608-a7fa-a387add6eca4"/>
+						<textElement textAlignment="Justified">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Diagnosis : Pasien dengan gangguan nerologi/ gangguan musculoskeletal/ penyakit  kardiovaskuler/ Penyakit Paru/ Diabetes"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="442" width="538" height="63" uuid="6cea4f16-841d-4af5-a6f8-257cf1e42460"/>
+					<box>
+						<bottomPen lineWidth="0.75"/>
+					</box>
+					<staticText>
+						<reportElement x="0" y="0" width="164" height="18" uuid="8a927176-e0f5-41b4-8a2c-ca1d69588d58"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="DejaVu Sans"/>
+							<paragraph firstLineIndent="4"/>
+						</textElement>
+						<text><![CDATA[Pengkajian dengan observasi]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="37" y="19" width="19" height="11" uuid="6881ccae-5dbc-4ee0-b5ba-2355ffeea1c9"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["a."]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="37" y="31" width="19" height="11" uuid="abc7db31-f206-4ac3-9119-721b24f5287a"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["b."]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="57" y="19" width="463" height="11" uuid="a7b443cc-9d33-426b-8533-dea2605bde14"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Pasien memerlukan bantuan saat duduk/ berdiri/ berjalan"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="57" y="31" width="463" height="11" uuid="59a3d2cb-f200-4437-a426-591e090cf5e1"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Pasien tampak tidak seimbang (Sempoyongan/ Limbung)"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="37" y="45" width="100" height="16" uuid="c6a05b78-000b-4305-bd16-4c5903918fe7"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Berisiko Jatuh"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="210" y="45" width="100" height="16" uuid="594f1c55-741f-4e5f-bbb0-4d9eb34f5a94"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak Berisiko Jatuh"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="21" y="46" width="14" height="14" uuid="926aa1e9-6052-4f64-9c0b-8d320602c8e1"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_resiko_jatuh}.equalsIgnoreCase("BERISIKO")?"\u2713":""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="194" y="46" width="14" height="14" uuid="dceafa59-9e15-487f-9f37-711817d04241"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_resiko_jatuh}.equalsIgnoreCase("TIDAK BERISIKO")?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField>
+					<reportElement x="63" y="81" width="16" height="14" uuid="571801ee-4802-448e-8cc4-5ba9e167ddce"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{PAGE_NUMBER}.equals("")?"":"\u2713")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="505" width="372" height="20" uuid="4d52657e-9476-4803-9207-e91b81555156"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["INTERVENSI"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="371" y="505" width="168" height="20" uuid="db2bacd0-07d8-4feb-9625-d97676634dc6"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["IMPLEMENTASI"]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement x="0" y="524" width="372" height="28" uuid="1cf3563b-23a0-488e-a458-e6460ee5ab43"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="43" y="1" width="322" height="20" uuid="b8596389-e496-47e1-99d8-7caf0050ba20"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Berikan kursi roda atau tawarkan brankat bila pasien membutuhkan"]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="29" y="1" width="14" height="20" uuid="49b78535-6926-488a-ab85-5dcd606bc96b"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[1.]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="371" y="524" width="168" height="28" uuid="b14ab5f3-f6ff-4316-a035-7314ccb47939"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="25" y="5" width="40" height="20" uuid="3a354d51-7010-4947-a960-a8cb99b95728"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Ya"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="112" y="5" width="44" height="20" uuid="842f1aac-1ef8-4630-a4d9-d28ec994b6d9"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="7" y="9" width="14" height="14" uuid="90bcdc1b-04d5-41d0-b2e2-3ca497140945"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter1_ya}.equals("true")?"\u2713":""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="93" y="8" width="14" height="14" uuid="2ab783fc-543e-4f44-8d69-209ecff3a7a2"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter1_ya}.equals("false")?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="551" width="372" height="42" uuid="927cfd84-0421-44d9-8dde-b4991dfa63d5"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="43" y="2" width="322" height="40" uuid="416c452a-bc4f-446a-aa45-4d55431bff9d"/>
+						<textElement textAlignment="Justified" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Berikan edukasi kepada pasien dan atau keluarga agar meminta pertolongan kepada Petugas apabila akan melakukan aktivitas selama berada di Rumah Sakit, misal : Ketoilet, dll "]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="29" y="2" width="14" height="20" uuid="043162dc-e615-45d8-bf34-29446bd80997"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[2.]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="371" y="551" width="168" height="42" uuid="2bff5701-af03-4875-a094-430739240e0f"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="25" y="11" width="40" height="20" uuid="26ce4674-54b6-4a66-81d4-8b68d3bcc908"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Ya"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="112" y="11" width="44" height="20" uuid="cd6fa8ac-b213-4ef2-af4e-cb206f43baf9"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="7" y="15" width="14" height="14" uuid="a9eed39d-a458-4061-8266-fc1b90665725"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter2_ya}.equals("true")?"\u2713":""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="93" y="15" width="14" height="14" uuid="014cdd1e-2431-423f-94d2-250a0a81772a"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter2_ya}.equals("false")?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="592" width="372" height="30" uuid="951339f4-5e49-4374-972d-6a4655c79e40"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="43" y="3" width="322" height="26" uuid="fd50c14c-f3b4-4d48-aeed-ebf0a2e20476"/>
+						<textElement textAlignment="Justified" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Informasikan kepada pasien dan atau keluarga untuk melepas pita risiko jatuh setelah keluar dari Rumah Sakit"]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="29" y="3" width="14" height="20" uuid="1edf0a55-fb8b-4833-9008-ed9d5ae49d5e"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[3.]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="371" y="592" width="168" height="30" uuid="e2ea2439-e168-4a0b-9641-cabcfd4906fe"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="25" y="6" width="40" height="20" uuid="0282e518-f47b-4008-94ff-28e6a84e54d9"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Ya"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="112" y="6" width="44" height="20" uuid="3cf4fa21-d64a-4ddc-9e30-8fc009b3a1f7"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="7" y="10" width="14" height="14" uuid="8a428600-f932-48bc-b163-d25ced84e4b0"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter3_ya}.equals("true")?"\u2713":""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="93" y="10" width="14" height="14" uuid="5188a78c-d534-4299-982c-1010e9500928"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter3_ya}.equals("false")?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="621" width="372" height="42" uuid="1ab29db2-c69e-4c04-84b7-b609874a485c"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="43" y="2" width="322" height="40" uuid="7be3e001-ed25-46f9-8ec7-821f7a00a767"/>
+						<textElement textAlignment="Justified" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Bantu pasien yang melakukan kegiatan dilokasi yang meningkatkan risiko jatuh, misal pasien melakukan latihan dengan menggunakan alat-alat yang meningkatkan risiko jatuh di unit Rehabilitasi Medik"]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="29" y="2" width="14" height="20" uuid="816f94fc-d12c-4d34-96fa-99b24f8b95c9"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font fontName="DejaVu Sans" size="8" isBold="true"/>
+						</textElement>
+						<text><![CDATA[4.]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="371" y="621" width="168" height="42" uuid="e43525e2-c661-44b8-9105-2b1c52d63c54"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<textField>
+						<reportElement x="25" y="12" width="40" height="20" uuid="54f90f62-950b-4b12-a12b-a38726902aa8"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Ya"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="112" y="12" width="44" height="20" uuid="2845764a-b249-4ebe-b205-b5b28fd5ab47"/>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="10" isBold="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA["Tidak"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="7" y="16" width="14" height="14" uuid="04b60e11-5d9e-44a2-a610-0850635c97db"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter4_ya}.equals("true")?"\u2713":""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="93" y="16" width="14" height="14" uuid="3cac80c9-98c5-4bbe-8479-3346ea870230"/>
+						<box>
+							<pen lineWidth="0.5"/>
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="DejaVu Sans" size="9" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{c_inter4_ya}.equals("false")?"\u2713":""]]></textFieldExpression>
+					</textField>
+				</frame>
+				<textField>
+					<reportElement x="107" y="83" width="10" height="10" uuid="15845077-ba85-4871-8faa-7aacab2c5758"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Sans"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="371" y="178" width="168" height="108" forecolor="rgba(247, 247, 247, 0.74509805)" backcolor="rgba(240, 240, 240, 0.0)" uuid="0ac396d0-397a-497e-b9d5-cd264bd50956"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="204" y="233" width="167" height="53" forecolor="rgba(247, 247, 247, 0.74509805)" backcolor="rgba(240, 240, 240, 0.0)" uuid="a05cc187-b30c-4b48-b452-2a93cbfb3d2b"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+			</frame>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="492" y="2" width="34" height="16" uuid="7ce0b48c-9f09-4ac6-ba35-3a14c098725d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" /"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="526" y="2" width="14" height="16" uuid="f16f9f7c-aec8-431d-b0f3-eb501c074598"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="0" width="223" height="20" uuid="5d511346-13d3-4671-9db3-6891fd74149b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[RSF/SKRINING/PASIEN/RAWAT/JALAN/REVISI 1]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
