@@ -11,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SoapPasienModel {
+
     private  String  noreg;
     private  String kdBagian ;
     private  String skriningk1;
