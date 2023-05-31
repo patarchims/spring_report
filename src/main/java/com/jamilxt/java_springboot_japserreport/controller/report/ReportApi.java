@@ -1,6 +1,5 @@
 package com.jamilxt.java_springboot_japserreport.controller.report;
 
-import com.jamilxt.java_springboot_japserreport.domain.report.ExportType;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

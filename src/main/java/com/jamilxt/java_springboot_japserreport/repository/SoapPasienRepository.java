@@ -47,7 +47,7 @@ public class SoapPasienRepository {
     public  SoapPasienModel findByNoreg(String noreg){
         String sql = "SELECT noreg, kd_bagian, skrining_k1, skrining_k2, skrining_k3, skrining_k4, skrining_k5, skrining_k6, " +
                 "skrining_f1, skrining_f2,skrining_f3,skrining_f4, skrining_b1, skrining_b2, skrining_rj,  skrining_r1, " +
-                "skrining_r2, skrining_r3, skrining_r3 FROM vicore_rme.dcppt_soap_pasien WHERE noreg=?";
+                "skrining_r2, skrining_r3, skrining_r3, skrining_r4 FROM vicore_rme.dcppt_soap_pasien WHERE noreg=?";
         return  jdbcTemplate.queryForObject(sql,  new SoapPasienMapper(), noreg );
     }
 
